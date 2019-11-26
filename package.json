@@ -1,0 +1,47 @@
+{
+  "name": "clean-service",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "NODE_PATH=./src micro-dev src/boot.js --watch src",
+    "start": "NODE_ENV=production NODE_PATH=./src micro",
+    "test": "NODE_PATH=./src ava",
+    "overwrite": "prettier-standard src/**/*.js",
+    "lint": "standard --fix",
+    "fixcode": "yarn run lint && yarn run overwrite"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "dependencies": {
+    "@bit/tungtung.micro.components.amqp": "^0.0.1",
+    "@bit/tungtung.micro.components.create-query": "^0.0.1",
+    "@bit/tungtung.micro.components.logger": "^0.0.1",
+    "@bit/tungtung.micro.components.micro-boom": "^0.0.1",
+    "@bit/tungtung.micro.components.micro-crud": "^0.0.1",
+    "@bit/tungtung.micro.components.micro-joi": "^0.0.1",
+    "@bit/tungtung.micro.components.middleware-auth": "^0.0.3",
+    "@bit/tungtung.micro.components.mongo": "^0.0.3",
+    "@bit/tungtung.micro.components.mongo-slug": "^0.0.1",
+    "ava": "^0.25.0",
+    "boom": "^7.2.0",
+    "chalk": "^2.4.1",
+    "dotenv": "^6.0.0",
+    "faker": "^4.1.0",
+    "husky": "^1.0.0-rc.13",
+    "joi": "^13.4.0",
+    "micro": "latest",
+    "micro-cors": "^0.1.0",
+    "micro-dev": "latest",
+    "microrouter": "^3.1.3",
+    "mongoose": "^5.1.7",
+    "prettier": "1.5.3",
+    "prettier-standard": "^8.0.1",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "standard": "^11.0.1",
+    "test-listen": "1.0.2",
+    "url": "^0.11.0"
+  },
+  "license": "MIT"
+}

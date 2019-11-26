@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+test.js
+*.log
+*.log
+logs/*.log
+amqp-test.js

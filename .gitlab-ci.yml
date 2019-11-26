@@ -1,0 +1,25 @@
+cache:
+  key: "${CI_BUILD_REF_NAME} node:10-alpine"
+  paths:
+  - node_modules/
+
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: node:10-alpine
+  variables:
+    NODE_ENV: "development"
+  before_script:
+    - apk add --update bash
+    - apk add --update git && rm -rf /tmp/* /var/cache/apk/*
+    - yarn config set '@bit:registry' https://node.bitsrc.io
+    - yarn install
+  script:
+    - npm run lint
+    - npm run test
+  artifacts:
+    paths:
+     - src/

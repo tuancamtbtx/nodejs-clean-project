@@ -1,0 +1,4 @@
+node_modules
+.idea
+docker-compose.yml
+Dockerfile
