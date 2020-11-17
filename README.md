@@ -14,17 +14,7 @@ yarn run start --port 3001 # production with port
 ```
 
 ## Modules
-```json
-{
-  "@bit/tungtung.micro.components.amqp": "^0.0.1",
-  "@bit/tungtung.micro.components.logger": "^0.0.1",
-  "@bit/tungtung.micro.components.micro-boom": "^0.0.1",
-  "@bit/tungtung.micro.components.micro-crud": "^0.0.1",
-  "@bit/tungtung.micro.components.micro-joi": "^0.0.1",
-  "@bit/tungtung.micro.components.middleware-auth": "^0.0.1",
-  "@bit/tungtung.micro.components.mongo": "^0.0.1"
-}
-```
+
 
 ## Use rabbitMQ
 
